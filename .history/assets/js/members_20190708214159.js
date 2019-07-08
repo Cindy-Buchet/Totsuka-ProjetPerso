@@ -21,9 +21,8 @@ let header = new Headers();
             let total = a.querySelector(".card-text");
 
             let clan = test[i].gsx$clan.$t;
-
-            if (clan == "Akatsuki" && test[i].gsx$total.$t > 0){
-                nom.innerHTML = test[i].gsx$nom.$t;
+            if (clan == "Akatsuki"){
+                nom.innnerHTML = test[i].gsx$nom.$t;
                 console.log(test[i].gsx$nom.$t);
                 total.innerHTML = test[i].gsx$total.$t + " points";
                 aka.appendChild(a);

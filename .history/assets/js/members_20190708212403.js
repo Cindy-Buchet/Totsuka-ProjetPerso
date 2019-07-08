@@ -17,24 +17,21 @@ let header = new Headers();
 
         for (let i = 0; i < test.length; i++){
             let a = document.importNode(members, true);
-            let nom = a.querySelector("#nom");
+            let nom = a.querySelector(".card-title");
             let total = a.querySelector(".card-text");
 
             let clan = test[i].gsx$clan.$t;
+            if (clan == "Akatsuki"){
+                nom.innnerHTML = test[i].gsx$_cn6ca.$t;
+                total.innerHTML = test[i].gsx$total.$t;
 
-            if (clan == "Akatsuki" && test[i].gsx$total.$t > 0){
-                nom.innerHTML = test[i].gsx$nom.$t;
-                console.log(test[i].gsx$nom.$t);
-                total.innerHTML = test[i].gsx$total.$t + " points";
-                aka.appendChild(a);
-
-            } 
-            /* else if ( clan == "Senju"){
+            } else if ( clan == "Senju"){
                 let sen = document.querySelector(".senju");
-                sen.innerHTML += '<h2>' + test[i].gsx$nom.$t + '</h2><p>Total: '+ test[i].gsx$total.$t + " points</p>";
+                sen.innerHTML += '<h2>' + test[i].gsx$_cn6ca.$t + '</h2><p>Total: '+ test[i].gsx$total.$t + " points</p>";
             
             }
-            */
+
+            aka.appendChild(a);
             
         }
 
