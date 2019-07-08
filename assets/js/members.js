@@ -1,3 +1,8 @@
+let card = document.querySelector("#template");
+
+
+let members = card.content.querySelector("#templateMembers");
+
 let header = new Headers();
     header.set("Content-type","application/json")
 
@@ -8,11 +13,23 @@ let header = new Headers();
     }).then(value => {
         let mydata = value;
         let test = mydata.feed.entry;
-        console.log(test);
 
-        for (let i = 0; i < test.length - 2; i++){
-            let ajouttest = document.querySelector(".results");
-            ajouttest.innerHTML += '<h1>' + test[i].gsx$_cn6ca.$t + '</h1><p>Total: '+ test[i].gsx$total.$t + " points</p>";
+        for (let i = 0; i < test.length; i++){
+            let a = document.importNode(members, true);
+            let nom = a.querySelector(".card-title");
+            
+
+            let clan = test[i].gsx$clan.$t;
+            if (clan == "Akatsuki"){
+                let aka = document.querySelector(".akatsuki");
+                nom.innnerHTML += test[i].gsx$_cn6ca.$t;
+                aka.innerHTML += '<h2>' + test[i].gsx$_cn6ca.$t + '</h2><p>Total: '+ test[i].gsx$total.$t + " points</p>";
+            } else if ( clan == "Senju"){
+                let sen = document.querySelector(".senju");
+                sen.innerHTML += '<h2>' + test[i].gsx$_cn6ca.$t + '</h2><p>Total: '+ test[i].gsx$total.$t + " points</p>";
+            
+            }
+            
         }
 
         
