@@ -1,12 +1,23 @@
 li{
     list-style-type: none;
 }
-.card-title{
-    background-color: blue;
-    color: white;
-    width: 100%;
-}
 
 .card-body{
-    padding: 0 !important;
+    padding: 0px !important;
+
+    p{
+        padding: 0px 10px;
+    }
+    
+    .card-title{
+        background-color: blue;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0px;
+    }
+}
+
+.card{
+    margin-bottom: 10px;
 }
