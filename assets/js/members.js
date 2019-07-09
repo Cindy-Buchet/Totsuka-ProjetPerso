@@ -2,7 +2,9 @@ let card = document.querySelector("#template");
 let members = card.content.querySelector("#templateMembers");
 
 let aka = document.querySelector(".akatsuki");
-
+let sen = document.querySelector(".senju");
+let uch = document.querySelector(".uchiha");
+let uzu = document.querySelector(".uzumaki");
 
 let header = new Headers();
     header.set("Content-type","application/json")
@@ -17,30 +19,65 @@ let header = new Headers();
 
         for (let i = 0; i < test.length; i++){
             let a = document.importNode(members, true);
-            let nom = a.querySelector("#nom");
+            let clic = a.querySelector(".card");
+            clic.id = "membres"+ i;
+            let nom = a.querySelector(".card-title");
             let total = a.querySelector(".card-text");
+
+            let list__el = "";
 
             let clan = test[i].gsx$clan.$t;
 
-            if (clan == "Akatsuki" && test[i].gsx$total.$t > 0){
+            if (clan == "Akatsuki" && test[i].gsx$nom.$t != ""){
                 nom.innerHTML = test[i].gsx$nom.$t;
-                console.log(test[i].gsx$nom.$t);
                 total.innerHTML = test[i].gsx$total.$t + " points";
-                aka.appendChild(a);
+                aka.appendChild(a);   
+            } else if ( clan == "Senju" && test[i].gsx$nom.$t != ""){
+                nom.innerHTML = test[i].gsx$nom.$t;
+                total.innerHTML = test[i].gsx$total.$t + " points";
+                sen.appendChild(a);
+                 
+            }  else if ( clan == "Uchiha" && test[i].gsx$nom.$t != ""){
+                nom.innerHTML = test[i].gsx$nom.$t;
+                total.innerHTML = test[i].gsx$total.$t + " points";
+                uch.appendChild(a);
+                 
+            }  else if ( clan == "Uzumaki" && test[i].gsx$nom.$t != ""){
+                nom.innerHTML = test[i].gsx$nom.$t;
+                total.innerHTML = test[i].gsx$total.$t + " points";
+                uzu.appendChild(a);
+                 
+            }    
+            list__el =  a.querySelector("#membres"+i);
+                
+                list__el.addEventListener('click', function(){
+                    
+                    localStorage.setItem('stock', JSON.stringify(test[i]));
+                    window.location.href = 'profil.html';
+    
+                });
+            
+        // Ouvrir page profil.html au clic 
+     
+        
+           /* list__el.addEventListener('click', function(){
 
-            } 
-            /* else if ( clan == "Senju"){
-                let sen = document.querySelector(".senju");
-                sen.innerHTML += '<h2>' + test[i].gsx$nom.$t + '</h2><p>Total: '+ test[i].gsx$total.$t + " points</p>";
-            
-            }
-            */
-            
+                let json__members = JSON.stringify(test[i]);
+                console.log(json__members);
+                //window.sessionStorage.setItem(test[y], json__members);
+
+                //window.location.href = 'profil.html';
+
+            });   */ 
+                
         }
 
-        
-        
+               
+            
+
+
 
     }).catch(error => {
         console.log(error)
     })
+
