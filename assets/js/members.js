@@ -6,12 +6,8 @@ let sen = document.querySelector(".senju");
 let uch = document.querySelector(".uchiha");
 let uzu = document.querySelector(".uzumaki");
 
-let header = new Headers();
-    header.set("Content-type","application/json")
 
-    fetch('https://spreadsheets.google.com/feeds/list/1KAjY4xdLEkC26gtne5fz-fK5AAZU1f8gc-hpPvpCJeo/od6/public/values?alt=json',{
-        headers:header
-    }).then(blob => {
+    fetch('https://spreadsheets.google.com/feeds/list/1KAjY4xdLEkC26gtne5fz-fK5AAZU1f8gc-hpPvpCJeo/od6/public/values?alt=json').then(blob => {
         return blob.json();
     }).then(value => {
         let mydata = value;
