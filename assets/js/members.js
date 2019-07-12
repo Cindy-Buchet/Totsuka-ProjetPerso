@@ -5,11 +5,13 @@ let aka = document.querySelector(".akatsuki");
 let sen = document.querySelector(".senju");
 let uch = document.querySelector(".uchiha");
 let uzu = document.querySelector(".uzumaki");
-
+let ajou = "";
+let inputvalue ="";
 
     fetch('https://spreadsheets.google.com/feeds/list/1KAjY4xdLEkC26gtne5fz-fK5AAZU1f8gc-hpPvpCJeo/od6/public/values?alt=json').then(blob => {
         return blob.json();
     }).then(value => {
+        
         let mydata = value;
         let test = mydata.feed.entry;
 
@@ -21,26 +23,39 @@ let uzu = document.querySelector(".uzumaki");
             let total = a.querySelector(".card-text");
 
             let list__el = "";
+            function Point(data,clas){
+                if (data == 0){
+                    condi = " point";
+                } else{
+                    condi = " points";
+                }
+      
+                if (data === ""){
+                    clas.innerHTML += 0 + condi;
+                } else{
+                    clas.innerHTML += data + condi;
+                }
+            }
 
             let clan = test[i].gsx$clan.$t;
 
             if (clan == "Akatsuki" && test[i].gsx$nom.$t != ""){
                 nom.innerHTML = test[i].gsx$nom.$t;
-                total.innerHTML = test[i].gsx$total.$t + " points";
+                Point(test[i].gsx$total.$t,total);
                 aka.appendChild(a);   
             } else if ( clan == "Senju" && test[i].gsx$nom.$t != ""){
                 nom.innerHTML = test[i].gsx$nom.$t;
-                total.innerHTML = test[i].gsx$total.$t + " points";
+                Point(test[i].gsx$total.$t,total);
                 sen.appendChild(a);
                  
             }  else if ( clan == "Uchiha" && test[i].gsx$nom.$t != ""){
                 nom.innerHTML = test[i].gsx$nom.$t;
-                total.innerHTML = test[i].gsx$total.$t + " points";
+                Point(test[i].gsx$total.$t,total);
                 uch.appendChild(a);
                  
             }  else if ( clan == "Uzumaki" && test[i].gsx$nom.$t != ""){
                 nom.innerHTML = test[i].gsx$nom.$t;
-                total.innerHTML = test[i].gsx$total.$t + " points";
+                Point(test[i].gsx$total.$t,total);
                 uzu.appendChild(a);
                  
             }    
@@ -53,14 +68,9 @@ let uzu = document.querySelector(".uzumaki");
     
                 });
             
-        }
+            
 
-        let inputvalue = [2,4,14,10,90,23,16];
-
-        inputvalue.sort((a,b) => a - b);
-        for (let i = 0; i < inputvalue.length; i++){
-            console.log(inputvalue[i]);
-        }     
+            }   
             
 
 

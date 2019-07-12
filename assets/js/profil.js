@@ -16,6 +16,7 @@ let condi = "";
     let getObject = JSON.parse(localStorage.getItem('stock'));
     console.log(getObject);
 
+    document.title = "Profil de " + getObject.gsx$nom.$t;
     let pnom = document.querySelector(".profil-nom");
     let ptotal = document.querySelector(".profil-total");
     let pclan = document.querySelector(".profil-clan");
@@ -27,19 +28,17 @@ let condi = "";
     pclan.innerHTML = getObject.gsx$clan.$t;
     Zero(getObject.gsx$pendu.$t, ppendu);
     
-    pimg.style.width = "100px";
-
     let clan = getObject.gsx$clan.$t;
     if (clan == "Akatsuki"){
-        pimg.src = "assets/img/akatsuki.jpg";
+        pimg.src = "assets/img/akatsuki.png";
         
     } else if ( clan == "Senju"){
-       pimg.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Symbole_du_clan_senju.svg/1280px-Symbole_du_clan_senju.svg.png";
+       pimg.src = "assets/img/senju.png";
          
     }  else if ( clan == "Uchiha"){
-        pimg.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Symbole_Uchiwa.svg/500px-Symbole_Uchiwa.svg.png";
+        pimg.src = "assets/img/uchiha.png";
          
     }  else if ( clan == "Uzumaki"){
-        pimg.src = "https://wir.skyrock.net/wir/v1/resize/?c=isi&im=%2F6721%2F88246721%2Fpics%2F3173418769_1_3_h1W3xdJe.png&w=409";
+        pimg.src = "assets/img/uzumaki.png";
          
     }    

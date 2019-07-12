@@ -37,39 +37,43 @@
         </div>
       </nav>
     </header>
-    <main class="container">
-        <h1>Discord de "Communauté Totsuka [FR]"</h1>
-
-        <p>Un discord où on s'ennuie jamais!</p>
-        <p>Tu aimes l’univers de Naruto ou tout simplement les mangas, voir les jeux vidéos et jouer en ligne ? Alors ce Discord est fait pour toi!</p>
-        <p>Le thème principal de notre Discord c'est Naruto car nous organisons une fois par mois pendant 12 jours des guerres de clans.</p>
-        <p>Avant de faire des guerres de clans (qui ont commencés en mars 2019) on était principalement une communauté FR du jeu de Naruto x Boruto Ninja Voltage. Ce jeu est un jeux vidéos mobile. On a 4 guildes en tout mais étant donné que le jeu part aux oubliettes et que on voulait partir sur d'autres sujets, on a pensé à mettre en place des activités avec la guerre de clan.</p>
-
-        <section>
-            <hr>
-            <h2>Sujets</h2>
-            <ul class="row">
-                <li class="col-6">
-                    <h3>Naruto</h3>
-                    <p>Le thème principal du Discord est Naruto car nos clans reprennent ceux de Naruto et comme expliqué plus haut, avant on était qu'une communauté d'un jeu Naruto</p>
-                </li>
-                <li class="col-6">
-                    <h3>Mangas</h3>
-                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-                </li>
-                <li class="col-6">
-                    <h3>Jeux vidéos</h3>
-                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-                </li>
-                <li class="col-6">
-                    <h3>RôlePlay</h3>
-                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-                </li>
-            </ul>
-        </section>
-
-</main>
     
+    <div class="container">
+        <template id="template">
+            <li class="col-lg-3 col-md-4 col-6" id="templateMembers">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title"></h3>
+                        <p>Total: <span class="card-text"></span></p>
+                    </div>
+                </div>
+            </li>
+        </template>
+            
+        <div class="results">
+          <h1>Les clans</h1>
+            <section>
+                <h2>Akatsuki</h2>
+                <ol class="akatsuki row"></ol>
+
+            </section>
+            <section>
+                <h2>Senju</h2>
+                <ol class="senju row"></ol>
+            </section>
+            <section>
+                <h2>Uchiha</h2>
+                <ol class="uchiha row"></ol>
+            </section>
+            <section>
+                <h2>Uzumaki</h2>
+                <ol class="uzumaki row"></ol>
+            </section>
+        </div>
+    </div>
+    
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
