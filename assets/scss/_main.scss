@@ -10,7 +10,7 @@ li{
     }
     
     .card-title{
-        background-color: blue;
+        background-color: green;
         color: white;
         width: 100%;
         text-align: center;
@@ -20,4 +20,20 @@ li{
 
 .card{
     margin-bottom: 10px;
+}
+
+
+// PROFIL
+.profil{
+    article{
+        padding: 10px;
+    }
+    .profil-dessus{
+        background-color: grey;
+    }
+    .espace{
+        background-color: grey;
+        padding: 10px;
+    }
+  
 }

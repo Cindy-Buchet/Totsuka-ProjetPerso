@@ -1,18 +1,17 @@
+let condi = "";
+    function Zero(data,clas){
+          if (data == 0){
+              condi = " point";
+          } else{
+              condi = " points";
+          }
 
-
-
-let header = new Headers();
-    header.set("Content-type","application/json")
-
-    fetch('https://spreadsheets.google.com/feeds/list/1KAjY4xdLEkC26gtne5fz-fK5AAZU1f8gc-hpPvpCJeo/od6/public/values?alt=json',{
-        headers:header
-    }).then(blob => {
-        return blob.json();
-    }).then(value => {
-        let mydata = value;
-        let test = mydata.feed.entry;
-          
-            
+          if (data === ""){
+              clas.innerHTML += 0 + condi;
+          } else{
+              clas.innerHTML += data + condi;
+          }
+      }
     
     let getObject = JSON.parse(localStorage.getItem('stock'));
     console.log(getObject);
@@ -21,31 +20,26 @@ let header = new Headers();
     let ptotal = document.querySelector(".profil-total");
     let pclan = document.querySelector(".profil-clan");
     let pimg = document.querySelector(".profil-img");
+    let ppendu = document.querySelector(".profil-pendu");
 
     pnom.innerHTML = getObject.gsx$nom.$t;
-    ptotal.innerHTML = getObject.gsx$total.$t + " points";
+    Zero(getObject.gsx$total.$t, ptotal);
     pclan.innerHTML = getObject.gsx$clan.$t;
+    Zero(getObject.gsx$pendu.$t, ppendu);
     
     pimg.style.width = "100px";
 
     let clan = getObject.gsx$clan.$t;
-    console.log(clan);
     if (clan == "Akatsuki"){
-        pimg.src = "https://img2.freepng.es/20180417/zhw/kisspng-akatsuki-obito-uchiha-clip-art-chinese-new-year-5ad5efe9dfe0c1.759625381523970025917.jpg";
+        pimg.src = "assets/img/akatsuki.jpg";
         
     } else if ( clan == "Senju"){
-       
+       pimg.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Symbole_du_clan_senju.svg/1280px-Symbole_du_clan_senju.svg.png";
          
     }  else if ( clan == "Uchiha"){
-        
+        pimg.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Symbole_Uchiwa.svg/500px-Symbole_Uchiwa.svg.png";
          
     }  else if ( clan == "Uzumaki"){
-        
+        pimg.src = "https://wir.skyrock.net/wir/v1/resize/?c=isi&im=%2F6721%2F88246721%2Fpics%2F3173418769_1_3_h1W3xdJe.png&w=409";
          
     }    
-
-
-    }).catch(error => {
-        console.log(error)
-    })
-

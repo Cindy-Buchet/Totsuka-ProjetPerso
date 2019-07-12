@@ -53,22 +53,14 @@ let uzu = document.querySelector(".uzumaki");
     
                 });
             
-        // Ouvrir page profil.html au clic 
-     
-        
-           /* list__el.addEventListener('click', function(){
-
-                let json__members = JSON.stringify(test[i]);
-                console.log(json__members);
-                //window.sessionStorage.setItem(test[y], json__members);
-
-                //window.location.href = 'profil.html';
-
-            });   */ 
-                
         }
 
-               
+        let inputvalue = [2,4,14,10,90,23,16];
+
+        inputvalue.sort((a,b) => a - b);
+        for (let i = 0; i < inputvalue.length; i++){
+            console.log(inputvalue[i]);
+        }     
             
 
 
