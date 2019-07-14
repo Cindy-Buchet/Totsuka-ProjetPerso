@@ -1,5 +1,7 @@
+// TEMPLATE MEMBRES
 let card = document.querySelector("#template");
 let members = card.content.querySelector("#templateMembers");
+
 
 let aka = document.querySelector(".akatsuki");
 let sen = document.querySelector(".senju");
@@ -14,6 +16,29 @@ let inputvalue ="";
         
         let mydata = value;
         let test = mydata.feed.entry;
+
+        function TopMembers(){
+            let TabMembers = [];
+            
+            for (let m = 0; m<test.length; m++){
+                let memb = test[m].gsx$nom.$t;
+                let pts = test[m].gsx$total.$t;
+                let NewTab = [];
+                NewTab.push(memb);
+                NewTab.push(pts);
+                TabMembers.push(NewTab);
+
+                TabMembers.sort(function(a, b) {
+                    return b[1] - a[1];
+                  });
+                
+            }
+
+        }
+
+        TopMembers();
+        
+        
 
         for (let i = 0; i < test.length; i++){
             let a = document.importNode(members, true);
@@ -58,7 +83,7 @@ let inputvalue ="";
                 Point(test[i].gsx$total.$t,total);
                 uzu.appendChild(a);
                  
-            }    
+            }
             list__el =  a.querySelector("#membres"+i);
                 
                 list__el.addEventListener('click', function(){
