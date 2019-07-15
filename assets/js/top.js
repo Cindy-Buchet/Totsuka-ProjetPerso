@@ -28,11 +28,13 @@ let topmem = card2.content.querySelector("#templateMembers-top");
 
             for (let x = 0; x <= 9; x++){
                 let c = document.importNode(topmem, true);
+                let toptop = c.querySelector(".top");
                 let toptitre = c.querySelector(".top-title");
                 let toptotal = c.querySelector(".top-text");
 
                 toptitre.innerHTML = TabMembers[x][0];
                 toptotal.innerHTML = TabMembers[x][1];
+                toptop.innerHTML = x + 1 + "e";
                 
                 
                 let select = document.querySelector(".classement");

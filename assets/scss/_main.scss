@@ -1,3 +1,18 @@
+// HEADER
+.header-index{
+    background: url(http://paperlief.com/images/naruto-uzumaki-wallpaper-1.jpg);
+    height: 400px;
+    background-size: cover;
+    h1{
+        color: $blanc;
+        text-align: center;
+    }
+}
+
+// CONTAINER
+.container{
+    padding: 20px 0px;
+}
 li{
     list-style-type: none;
 }
@@ -40,4 +55,30 @@ li{
         width: 160px;
     }
   
+}
+
+// TOP
+.topclassement{
+    border: 2px solid black;
+    margin-bottom: 0px !important;
+}
+.section-top{
+    .classement{
+        width: 70%;
+        display: block;
+        margin: auto;
+    }
+    .top{
+        background-color: red;
+        margin-bottom: 0px;  
+        padding: 5px; 
+    }
+    .top-title{
+        margin-bottom: 0px;
+        padding: 5px;
+    }
+    .top-total{
+        margin-bottom: 0px;
+        padding: 5px;
+    }
 }

@@ -12,16 +12,14 @@ h3{
 
 h2{
     font-size: 31px;
-    border-bottom: 5px solid green;
+    border-left: 5px solid green;
     border-width: 5px;
-    padding-bottom: 5px;
+    padding-left: 5px;
     max-width: 350px;
     min-width: 200px;
     width: 50%;
 }
 h1{
-    color: green;
+    color: $noir;
     font-size: 43px;
-    border-left: 5px solid green;
-    padding-left: 5px;
 }
