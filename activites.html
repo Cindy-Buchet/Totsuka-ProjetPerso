@@ -23,48 +23,83 @@
           <li class="nav-item">
             <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="guerre.html">GDC</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="members.html">Membres</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="top.html">Top</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
-  <main>
-    <div class="container">
+<main>
+    <section class="container">
+        <template id="act-template">
+            <li id="act-contenu" class="col-12 col-md-6">
+                <div class="act-di">
+                    <div class="act-gauche">
+                        <img class="act-img">
+                        <h3 class="act-nom"></h3>   
+                        <img class="act-vocal act-voec">
+                        <img class="act-ecrit act-voec">             
+                    </div>    
+                    <div class="act-droite">
+                        <div class="act-descri">
+                            <h4>Description</h4>
 
-        <template id="template-top">
-            <li class="col-12" id="templateMembers-top">
-              <div class="row topclassement">
-                <p class="col-2 top"></p>
-                <img />
-                <h3 class="col-4 card-title top-title"></h3>
-                <p class="col-6 top-total">Total: <span class="card-text top-text"></span> points</p>
-              </div>
+                        </div>
+
+                        <div>
+                            <h4>Points</h4>
+                            <ul class="act-points">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>    
             </li>
         </template>
+        <h1>Les activités</h1>
+        <div class="row">
+            <div class="col-2 act-filtre">
+                <div class="act-gauche-fond">
+                    <h2>Filtre</h2>
+                    <div class="filtre-vocalecrit">
+                        <h3 class="accordion">Vocal/Ecrit</h3>
 
-        <section class="section-top">
-          <h1>Classement des 10 premiers</h1>
-          <ol class="classement row">
+                        <div class="panel">
+                            <label>
+                                <input class="filter" data-property="vocalecrit" value="Vocal" type="radio" name="check-box" id="btn-vocal" /> <span>Vocal</span>
+                            </label>
+                            <label>
+                                <input class="filter" data-property="vocalecrit" value="Ecrit" type="radio" name="check-box" id="btn-ecrit" /> <span>Ecrit</span>
+                            </label>
+                            <label>
+                                <input class="filter" data-property="vocalecrit" value="EcritVocal" type="radio" name="check-box" id="btn-ecritvocal" /> <span>Les deux</span>
+                            </label>
+                        </div>
+                    </div>    
+                </div>
+                
+            </div>
+            <div class="col-10">
+                <ol class="act-ol row">
 
-          </ol>  
-        </section>
+                </ol>   
+            </div>
+        </div>
         
-    </div>
-  </main>
-
-
+    </section>
+</main>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <script src="assets/js/top.js"></script>
+    <script src="assets/js/activites.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@ let inputvalue ="";
         
         let mydata = value;
         let test = mydata.feed.entry;
-
+        // Classement
         function TopMembers(){
             let TabMembers = [];
             
@@ -39,15 +39,23 @@ let inputvalue ="";
         TopMembers();
         
         
-
+        // Boucle pour afficher tout le monde
         for (let i = 0; i < test.length; i++){
             let a = document.importNode(members, true);
             let clic = a.querySelector(".card");
             clic.id = "membres"+ i;
             let nom = a.querySelector(".card-title");
             let total = a.querySelector(".card-text");
-
+            let im = a.querySelector(".card-img");
+            if(test[i].gsx$img.$t == ""){
+                im.src = "https://image.flaticon.com/icons/png/512/55/55089.png";
+            } else{
+                im.src = test[i].gsx$img.$t;
+            }
+            
             let list__el = "";
+
+            // Afficher point(s) selon le nombre
             function Point(data,clas){
                 if (data == 0){
                     condi = " point";
@@ -63,7 +71,8 @@ let inputvalue ="";
             }
 
             let clan = test[i].gsx$clan.$t;
-
+            
+            // Mettre dans son clan
             if (clan == "Akatsuki" && test[i].gsx$nom.$t != ""){
                 nom.innerHTML = test[i].gsx$nom.$t;
                 Point(test[i].gsx$total.$t,total);
@@ -84,6 +93,8 @@ let inputvalue ="";
                 uzu.appendChild(a);
                  
             }
+
+            // Enregistrer sur le local la personne
             list__el =  a.querySelector("#membres"+i);
                 
                 list__el.addEventListener('click', function(){

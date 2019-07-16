@@ -6,13 +6,20 @@ h1, h2, h3, h4{
     font-family: 'Lato', sans-serif;
 }
 
+h4{
+    font-size: 16px;
+    font-weight: bold;
+    color: $rouge;
+}
+
 h3{
     font-size: 22px;
 }
 
 h2{
     font-size: 31px;
-    border-left: 5px solid green;
+    border-left: 5px solid $jaune;
+    color: $jaune;
     border-width: 5px;
     padding-left: 5px;
     max-width: 350px;
