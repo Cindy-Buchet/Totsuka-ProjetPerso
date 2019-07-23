@@ -1,8 +1,8 @@
 // HEADER
 .header-index{
-    background: url(http://paperlief.com/images/naruto-uzumaki-wallpaper-1.jpg);
+    background: url(../../assets/img/back.jpg);
     height: 400px;
-    background-position: center left;
+    background-position: center center;
     background-size: cover;
     h1{
         color: $blanc;
@@ -27,7 +27,7 @@ li{
     }
 
     .card-body{
-        background-color: $rouge;
+        background-color: $color5;
         position: relative;
         bottom: 50px;
         padding-top: 43px;
@@ -92,7 +92,9 @@ li{
         margin: auto;
     }
     .top{
-        background-color: red;
+        background-color: $color2;
+        text-align: center;
+        font-weight: bold;
         margin-bottom: 0px;  
         padding: 5px; 
     }
@@ -112,7 +114,7 @@ li{
 
 .act-filtre{
     .act-gauche-fond{
-        background-color: $rouge;
+        background-color: $color5;
         padding: 10px;
     }
     
@@ -147,7 +149,7 @@ li{
 }
 
 .act-gauche{
-    background-color: $jaune;
+    background-color: $color4;
     text-align: center;
     padding: 15px;
     grid-column: 1;
@@ -155,6 +157,7 @@ li{
 .act-droite{
     padding: 15px;
     grid-column: 2;
+    background-color: $color3;
 }
 
 .act-voec{

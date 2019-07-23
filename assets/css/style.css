@@ -359,6 +359,13 @@ body{
     position: relative;
     vertical-align: top;
 }
+
+$rouge: #FF250B;
+$jaune: #FFCF0D;
+$rouora: #E84A09;
+$princi: #E84A09;
+$noir: #130E0A;
+$blanc: #FFF;
 */
 body {
   font-family: 'Karla', sans-serif;
@@ -372,7 +379,7 @@ h1, h2, h3, h4 {
 h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #FF250B;
+  color: #6E99C2;
 }
 
 h3 {
@@ -381,8 +388,8 @@ h3 {
 
 h2 {
   font-size: 31px;
-  border-left: 5px solid #FFCF0D;
-  color: #FFCF0D;
+  border-left: 5px solid #1B2836;
+  color: #1B2836;
   border-width: 5px;
   padding-left: 5px;
   max-width: 350px;
@@ -396,9 +403,9 @@ h1 {
 }
 
 .header-index {
-  background: url(http://paperlief.com/images/naruto-uzumaki-wallpaper-1.jpg);
+  background: url(../../assets/img/back.jpg);
   height: 400px;
-  background-position: center left;
+  background-position: center center;
   background-size: cover;
 }
 
@@ -425,7 +432,7 @@ li {
 }
 
 .card-members .card-body {
-  background-color: #FF250B;
+  background-color: #C2A027;
   position: relative;
   bottom: 50px;
   padding-top: 43px;
@@ -488,7 +495,9 @@ li {
 }
 
 .section-top .top {
-  background-color: red;
+  background-color: #6E99C2;
+  text-align: center;
+  font-weight: bold;
   margin-bottom: 0px;
   padding: 5px;
 }
@@ -504,7 +513,7 @@ li {
 }
 
 .act-filtre .act-gauche-fond {
-  background-color: #FF250B;
+  background-color: #C2A027;
   padding: 10px;
 }
 
@@ -542,7 +551,7 @@ li {
 }
 
 .act-gauche {
-  background-color: #FFCF0D;
+  background-color: #CCC93F;
   text-align: center;
   padding: 15px;
   -ms-grid-column: 1;
@@ -553,6 +562,7 @@ li {
   padding: 15px;
   -ms-grid-column: 2;
   grid-column: 2;
+  background-color: #D4D68E;
 }
 
 .act-voec {

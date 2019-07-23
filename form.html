@@ -37,7 +37,7 @@
       </nav>
     </header>
     <main class="container">
-            <form id='foo'>
+            <form id='foo' action="https://script.google.com/macros/s/AKfycbxKh1OKHEdLcJyc8kUqdoc3P8DY0fTUkJYOzM-mTJNT7_3B5AY/exec">
                     <p>
                       <label>Name</label>
                       <input id='name' name='name' type='text'>
@@ -84,11 +84,11 @@ $("#foo").submit(function(event){
     $inputs.prop("disabled", true);
 
     // Fire off the request to /form.php
-    request = $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbxKh1OKHEdLcJyc8kUqdoc3P8DY0fTUkJYOzM-mTJNT7_3B5AY/exec",
-        type: "post",
-        data: serializedData
-    });
+    //request = $.ajax({
+      //  url: "https://script.google.com/macros/s/AKfycbxKh1OKHEdLcJyc8kUqdoc3P8DY0fTUkJYOzM-mTJNT7_3B5AY/exec",
+        //type: "post",
+        //data: serializedData
+    //});
 
     // Callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR){
