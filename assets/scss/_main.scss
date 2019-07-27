@@ -10,6 +10,10 @@
     }
 }
 
+nav{
+    position: absolute;
+    z-index: 100 !important;
+}
 // CONTAINER
 .container{
     padding: 20px 0px;
@@ -61,21 +65,40 @@ li{
 }
 
 
-// PROFIL
+// PROFIL$
+
 .profil{
     article{
         padding: 10px;
     }
+    h1{
+        float: left;
+    }
+    .profil-clan{
+        height: 50px;
+        position: absolute;
+        right: 0;
+    }
+    .nom-clan{
+        display: inline-block;
+    }
     .profil-dessus{
-        background-color: grey;
+        background-color: $color3;
     }
     .espace{
-        background-color: grey;
+        background-color: $color3;
         padding: 10px;
     }
     .profil-img{
-        height: 160px;
-        width: 160px;
+        border-radius: 50%;
+        width: 100%;
+        max-width: 200px;
+        position: relative;
+        margin: auto;
+    }
+
+    .profil-pres{
+        font-style: italic;
     }
   
 }
@@ -166,3 +189,6 @@ li{
     border-radius: 50%;
     padding: 5px;
 }
+
+
+

@@ -394,7 +394,6 @@ h2 {
   padding-left: 5px;
   max-width: 350px;
   min-width: 200px;
-  width: 50%;
 }
 
 h1 {
@@ -412,6 +411,11 @@ h1 {
 .header-index h1 {
   color: #FFF;
   text-align: center;
+}
+
+nav {
+  position: absolute;
+  z-index: 100 !important;
 }
 
 .container {
@@ -469,18 +473,39 @@ li {
   padding: 10px;
 }
 
+.profil h1 {
+  float: left;
+}
+
+.profil .profil-clan {
+  height: 50px;
+  position: absolute;
+  right: 0;
+}
+
+.profil .nom-clan {
+  display: inline-block;
+}
+
 .profil .profil-dessus {
-  background-color: grey;
+  background-color: #D4D68E;
 }
 
 .profil .espace {
-  background-color: grey;
+  background-color: #D4D68E;
   padding: 10px;
 }
 
 .profil .profil-img {
-  height: 160px;
-  width: 160px;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 200px;
+  position: relative;
+  margin: auto;
+}
+
+.profil .profil-pres {
+  font-style: italic;
 }
 
 .topclassement {
@@ -591,4 +616,18 @@ li {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.table-agenda {
+  width: 100%;
+}
+
+.table-agenda th {
+  width: 14%;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.table-agenda thead {
+  width: 100%;
 }

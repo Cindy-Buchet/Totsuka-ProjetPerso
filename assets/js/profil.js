@@ -22,23 +22,33 @@ let condi = "";
     let pclan = document.querySelector(".profil-clan");
     let pimg = document.querySelector(".profil-img");
     let ppendu = document.querySelector(".profil-pendu");
+    let ppres = document.querySelector(".profil-pres");
 
     pnom.innerHTML = getObject.gsx$nom.$t;
     Zero(getObject.gsx$total.$t, ptotal);
     pclan.innerHTML = getObject.gsx$clan.$t;
     Zero(getObject.gsx$pendu.$t, ppendu);
     
+    
+    if(getObject.gsx$img.$t == ""){
+        pimg.src = "https://image.flaticon.com/icons/png/512/55/55089.png";
+    } else{
+        pimg.src = getObject.gsx$img.$t;
+    }
+  
     let clan = getObject.gsx$clan.$t;
+
     if (clan == "Akatsuki"){
-        pimg.src = "assets/img/akatsuki.png";
+        pclan.src = "assets/img/akatsuki.png";
         
     } else if ( clan == "Senju"){
-       pimg.src = "assets/img/senju.png";
+       pclan.src = "assets/img/senju.png";
          
     }  else if ( clan == "Uchiha"){
-        pimg.src = "assets/img/uchiha.png";
+        pclan.src = "assets/img/uchiha.png";
          
     }  else if ( clan == "Uzumaki"){
-        pimg.src = "assets/img/uzumaki.png";
+        pclan.src = "assets/img/uzumaki.png";
          
-    }    
+    } 
+    
