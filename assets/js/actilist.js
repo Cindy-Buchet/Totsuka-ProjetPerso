@@ -132,11 +132,11 @@ fetch('https://spreadsheets.google.com/feeds/list/1m_yWTlrWu7xhaEXh5QCSk8HpppKr_
                 text.className = 'card-text';
 
                 let text2 = document.createElement('h5');
-                text2.innerText = "\n Première acitivité : " + TabMembers[index][2] + " organisé à " + TabMembers[index][5] + " par " + TabMembers[index][8];
+                text2.innerText = "\n Deuxième acitivité : " + TabMembers[index][2] + " organisé à " + TabMembers[index][5] + " par " + TabMembers[index][8];
                 text2.className = 'card-text';
 
                 let text3 = document.createElement('h5');
-                text3.innerText = "\n Première acitivité : " + TabMembers[index][3] + " organisé à " + TabMembers[index][6] + " par " + TabMembers[index][9];
+                text3.innerText = "\n Troisième acitivité : " + TabMembers[index][3] + " organisé à " + TabMembers[index][6] + " par " + TabMembers[index][9];
                 text3.className = 'card-text';
                 
                 
