@@ -31,21 +31,29 @@ fetch('https://spreadsheets.google.com/feeds/list/1m_yWTlrWu7xhaEXh5QCSk8HpppKr_
 
         }
 
+        for(index = 0; index < TabMembers.length; index++){
+            console.log("Le " + TabMembers[index][0] + " Aout." + "Les activitées sont : " + TabMembers[index][1]+ " " + TabMembers[index][2]+ " " +TabMembers[index][3]);
+        }
+
+
         for (let i = 0; i < joursTab.length; i++){
             mois = joursTab[i].gsx$mois.$t;
             console.log(mois);
 
+            
+                
             let card = document.querySelector(".card");
-            let nom = document.querySelector(".card-title");
+            let nom = document.querySelector(".card-header");
             let text = document.querySelector(".card-text");
             let text2 = document.querySelector(".card-text2");
             let text3 = document.querySelector(".card-text3");
+            
             nom.innerHTML = TabMembers[i][0] + " " + mois;
-            text.innerHTML = TabMembers[0][1];
-            text2.innerHTML = TabMembers[0][2];
-            text3.innerHTML = TabMembers[0][3];
-            card.appendChild(document);
-
+            text.innerHTML = TabMembers[i][1];
+            text2.innerHTML = TabMembers[i][2];
+            text3.innerHTML = TabMembers[i][3];
+                
+           
 
             /* 
             console.log(TabMembers[i][0]); // 1
