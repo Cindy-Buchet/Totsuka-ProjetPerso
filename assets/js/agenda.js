@@ -20,17 +20,21 @@ fetch('https://spreadsheets.google.com/feeds/list/1m_yWTlrWu7xhaEXh5QCSk8HpppKr_
     for (let i = 0; i < joursTab.length; i++){
         
         if(arguments[0] == joursTab[i].gsx$jour.$t){
-        let gsvars = joursTab[i].gsx$activite.$t;
+        let act1 = joursTab[i].gsx$activite1.$t;
+        let act2 = joursTab[i].gsx$activite2.$t;
+        let act3 = joursTab[i].gsx$activite3.$t;
         
-        return gsvars;
+        return act1,act2,act3;
     }
     }
   }
+
+  
   
   function func2(a) {
     let selectClass = document.querySelectorAll(".jours");
     for (let z = 0; z < selectClass.length; z++){
-        if(arguments[0] == selectClass[z].innerHTML){
+        if((arguments[0]) == selectClass[z].innerHTML){
         
         let calendarvar = selectClass[z].innerHTML;
         
@@ -38,8 +42,10 @@ fetch('https://spreadsheets.google.com/feeds/list/1m_yWTlrWu7xhaEXh5QCSk8HpppKr_
         }
     
     }
+    
     let selectClass = document.querySelectorAll(".jours");
-    for (let r = 0; r < 31; r++){
+    for (let r = 0; r < selectClass.length; r++){
+        
         let var1 = func1(r);
         let var2 = func2(r);
         let activite = GetActivities(r);
@@ -50,6 +56,7 @@ fetch('https://spreadsheets.google.com/feeds/list/1m_yWTlrWu7xhaEXh5QCSk8HpppKr_
             selectClass[r].appendChild(newP);
 
         }
+        
 
 
     }
