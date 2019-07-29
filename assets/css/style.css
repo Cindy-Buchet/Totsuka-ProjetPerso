@@ -367,6 +367,15 @@ $princi: #E84A09;
 $noir: #130E0A;
 $blanc: #FFF;
 */
+footer {
+  background-color: #130E0A;
+  color: #FFF;
+}
+
+footer p {
+  margin-bottom: 0px;
+}
+
 body {
   font-family: 'Karla', sans-serif;
   font-size: 16px;

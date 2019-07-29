@@ -32,3 +32,11 @@ $color5: #C2A027;
 $noir: #130E0A;
 $blanc: #FFF;
 
+footer{
+    background-color: $noir;
+    color: $blanc;
+    p{
+        margin-bottom: 0px;
+    }
+    
+}
