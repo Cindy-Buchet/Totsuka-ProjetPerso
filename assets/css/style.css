@@ -618,16 +618,19 @@ li {
   transition: all 0.3s;
 }
 
-.table-agenda {
-  width: 100%;
+.agenda li {
+  padding-top: 15px;
 }
 
-.table-agenda th {
-  width: 14%;
-  text-align: center;
-  padding: 10px 0px;
+.agenda li span {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.table-agenda thead {
-  width: 100%;
+.agenda li p {
+  margin-bottom: 0px;
+}
+
+.agenda .card-header {
+  margin: 0px;
 }

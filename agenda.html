@@ -43,58 +43,12 @@
     </header>
     
     <main class="container">
-      <h3 class="card-header" id="monthAndYear"></h3>
-        <table class="table table-agenda table-bordered" id="calendar">
-          <thead>
-          <tr>
-              <th>Lundi</th>
-              <th>Mardi</th>
-              <th>Mercredi</th>
-              <th>Jeudi</th>
-              <th>Vendredi</th>
-              <th>Samedi</th>
-              <th>Dimanche</th>
-          </tr>
-          </thead>
-
-          <tbody id="calendar-body">
-
-          </tbody>
-        </table>
-      
-              <div class="form-inline">
-      
-                  <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">Précédent</button>
-      
-                  <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">Suivant</button>
-              </div>
-
-
-              <form class="form-inline">
-                  <label class="lead mr-2 ml-2" for="month">Aller A: </label>
-                  <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
-                      <option value=0>Janvier</option>
-                      <option value=1>Février</option>
-                      <option value=2>Mars</option>
-                      <option value=3>Avril</option>
-                      <option value=4>Mai</option>
-                      <option value=5>Juin</option>
-                      <option value=6>Juillet</option>
-                      <option value=7>Aout</option>
-                      <option value=8>Septembre</option>
-                      <option value=9>Octobre</option>
-                      <option value=10>Novembre</option>
-                      <option value=11>Décembre</option>
-                  </select>
-      
-      
-                  <label for="year"></label><select class="form-control col-sm-4" name="year" id="year" onchange="jump()">
-                  <option value=2019>2019</option>
-                  <option value=2020>2020</option>
-              </select></form>
+      <div id="card-container" class="row agenda">
+        
+      </div>
+     
+        
     </main>
-    <!--<button name="jump" onclick="jump()">Go</button>-->
-<script src="assets/js/agendac.js"></script>
 
 <!-- Optional JavaScript for bootstrap -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -107,8 +61,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
         integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
-    <script src="assets/js/agendac.js"></script>
     <script src="assets/js/agenda.js"></script>
+    
     
 </body>
 </html>

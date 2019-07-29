@@ -1,15 +1,17 @@
 // Table Agenda
-.table-agenda{
-    width: 100%;
-
-    th{
-        width: 14%;
-        text-align: center;
-        padding: 10px 0px;
+.agenda{
+    li{
+        padding-top: 15px;
+        span{
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        p{
+            margin-bottom: 0px;
+        }
     }
-
-    thead{
-        width: 100%;
+    .card-header{
+        margin: 0px;
     }
     
 }
