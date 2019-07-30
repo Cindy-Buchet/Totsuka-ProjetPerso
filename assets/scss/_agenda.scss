@@ -10,8 +10,16 @@
             margin-bottom: 0px;
         }
     }
+    .card{
+        border: none;
+    }
     .card-header{
         margin: 0px;
+        background-color: $color1;
+        color: white;
+    }
+    .card-body{
+        background-color: $color4;
     }
     
 }

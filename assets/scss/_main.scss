@@ -1,4 +1,7 @@
 // HEADER
+body{
+    height: 100%;
+}
 .header-index{
     background: url(../../assets/img/back.jpg);
     height: 400px;
@@ -8,6 +11,23 @@
         color: $blanc;
         text-align: center;
     }
+}
+.fond-blanc{
+    background-color: $color3;
+}
+section{
+    margin: 0px;
+    padding: 20px;
+}
+footer{
+    background-color: $color3;
+    position: absolute;
+    width: 100%;
+
+    p{
+        margin-bottom: 0px;
+    }
+    
 }
 
 nav{
@@ -21,7 +41,26 @@ nav{
 li{
     list-style-type: none;
 }
-
+// ACCUEIL
+.sujets-discord{
+    .img-gauche{
+        position: relative;
+        top: 30px;
+    }
+    img{
+        width: 100%;
+    }
+    li{
+        margin-bottom: 15px;
+    }
+}
+.accueil-img-play{
+    width: 100%;
+    display: block;
+    margin: auto;
+    max-width: 300px;
+}
+// MEMBRES
 .card-members{
     border: none;
     padding: 0px !important;
@@ -31,7 +70,7 @@ li{
     }
 
     .card-body{
-        background-color: $color5;
+        background-color: $color2;
         position: relative;
         bottom: 50px;
         padding-top: 43px;
@@ -115,8 +154,9 @@ li{
         margin: auto;
     }
     .top{
-        background-color: $color2;
+        background-color: $color1;
         text-align: center;
+        color: $blanc;
         font-weight: bold;
         margin-bottom: 0px;  
         padding: 5px; 
@@ -131,20 +171,8 @@ li{
     }
 }
 
-
-
 // ACTIVITES
 
-.act-filtre{
-    .act-gauche-fond{
-        background-color: $color5;
-        padding: 10px;
-    }
-    
-    label{
-        display: block;
-    }
-}
 .act-img{
     max-width: 100px;
     width: 90%;
@@ -165,22 +193,24 @@ li{
     }
 }
 .act-di{
-    border: 1px solid black;
     margin-bottom: 20px;
     display: grid;
     grid-template-columns: 30% 70%;
 }
 
 .act-gauche{
-    background-color: $color4;
+    background-color: $color1;
     text-align: center;
     padding: 15px;
     grid-column: 1;
+    h3{
+        color: white;
+    }
 }
 .act-droite{
     padding: 15px;
     grid-column: 2;
-    background-color: $color3;
+    background-color: $color4;
 }
 
 .act-voec{

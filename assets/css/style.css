@@ -352,30 +352,6 @@ section {
   box-sizing: border-box;
 }
 
-/*
-body{
-    background-image: url(http://2018.cindy-buchet.dwm.re/tfa/assets/img/fond.jpg);
-    background-position: center center;
-    position: relative;
-    vertical-align: top;
-}
-
-$rouge: #FF250B;
-$jaune: #FFCF0D;
-$rouora: #E84A09;
-$princi: #E84A09;
-$noir: #130E0A;
-$blanc: #FFF;
-*/
-footer {
-  background-color: #130E0A;
-  color: #FFF;
-}
-
-footer p {
-  margin-bottom: 0px;
-}
-
 body {
   font-family: 'Karla', sans-serif;
   font-size: 16px;
@@ -388,7 +364,7 @@ h1, h2, h3, h4 {
 h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #6E99C2;
+  color: #BF4904;
 }
 
 h3 {
@@ -397,8 +373,8 @@ h3 {
 
 h2 {
   font-size: 31px;
-  border-left: 5px solid #1B2836;
-  color: #1B2836;
+  border-left: 5px solid #D99441;
+  color: #D99441;
   border-width: 5px;
   padding-left: 5px;
   max-width: 350px;
@@ -406,8 +382,12 @@ h2 {
 }
 
 h1 {
-  color: #130E0A;
+  color: #6AA6A6;
   font-size: 43px;
+}
+
+body {
+  height: 100%;
 }
 
 .header-index {
@@ -420,6 +400,25 @@ h1 {
 .header-index h1 {
   color: #FFF;
   text-align: center;
+}
+
+.fond-blanc {
+  background-color: #D9BBA0;
+}
+
+section {
+  margin: 0px;
+  padding: 20px;
+}
+
+footer {
+  background-color: #D9BBA0;
+  position: absolute;
+  width: 100%;
+}
+
+footer p {
+  margin-bottom: 0px;
 }
 
 nav {
@@ -435,6 +434,26 @@ li {
   list-style-type: none;
 }
 
+.sujets-discord .img-gauche {
+  position: relative;
+  top: 30px;
+}
+
+.sujets-discord img {
+  width: 100%;
+}
+
+.sujets-discord li {
+  margin-bottom: 15px;
+}
+
+.accueil-img-play {
+  width: 100%;
+  display: block;
+  margin: auto;
+  max-width: 300px;
+}
+
 .card-members {
   border: none;
   padding: 0px !important;
@@ -445,7 +464,7 @@ li {
 }
 
 .card-members .card-body {
-  background-color: #C2A027;
+  background-color: #BF4904;
   position: relative;
   bottom: 50px;
   padding-top: 43px;
@@ -497,11 +516,11 @@ li {
 }
 
 .profil .profil-dessus {
-  background-color: #D4D68E;
+  background-color: #D9BBA0;
 }
 
 .profil .espace {
-  background-color: #D4D68E;
+  background-color: #D9BBA0;
   padding: 10px;
 }
 
@@ -529,8 +548,9 @@ li {
 }
 
 .section-top .top {
-  background-color: #6E99C2;
+  background-color: #A61205;
   text-align: center;
+  color: #FFF;
   font-weight: bold;
   margin-bottom: 0px;
   padding: 5px;
@@ -544,15 +564,6 @@ li {
 .section-top .top-total {
   margin-bottom: 0px;
   padding: 5px;
-}
-
-.act-filtre .act-gauche-fond {
-  background-color: #C2A027;
-  padding: 10px;
-}
-
-.act-filtre label {
-  display: block;
 }
 
 .act-img {
@@ -576,7 +587,6 @@ li {
 }
 
 .act-di {
-  border: 1px solid black;
   margin-bottom: 20px;
   display: -ms-grid;
   display: grid;
@@ -585,18 +595,22 @@ li {
 }
 
 .act-gauche {
-  background-color: #CCC93F;
+  background-color: #A61205;
   text-align: center;
   padding: 15px;
   -ms-grid-column: 1;
   grid-column: 1;
 }
 
+.act-gauche h3 {
+  color: white;
+}
+
 .act-droite {
   padding: 15px;
   -ms-grid-column: 2;
   grid-column: 2;
-  background-color: #D4D68E;
+  background-color: #D99441;
 }
 
 .act-voec {
@@ -604,27 +618,6 @@ li {
   height: 40px;
   border-radius: 50%;
   padding: 5px;
-}
-
-.wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-#sidebar {
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  z-index: 999;
-  background: #7386D5;
-  color: #fff;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 .agenda li {
@@ -640,6 +633,16 @@ li {
   margin-bottom: 0px;
 }
 
+.agenda .card {
+  border: none;
+}
+
 .agenda .card-header {
   margin: 0px;
+  background-color: #A61205;
+  color: white;
+}
+
+.agenda .card-body {
+  background-color: #D99441;
 }
