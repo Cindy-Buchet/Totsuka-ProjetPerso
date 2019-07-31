@@ -341,10 +341,6 @@ template {
   display: none;
 }
 
-section {
-  margin: 20px 0;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -373,16 +369,14 @@ h3 {
 
 h2 {
   font-size: 31px;
-  border-left: 5px solid #D99441;
-  color: #D99441;
+  border-left: 5px solid #698CB3;
+  color: #698CB3;
   border-width: 5px;
   padding-left: 5px;
-  max-width: 350px;
-  min-width: 200px;
 }
 
 h1 {
-  color: #6AA6A6;
+  color: #698CB3;
   font-size: 43px;
 }
 
@@ -408,11 +402,12 @@ body {
 
 section {
   margin: 0px;
-  padding: 20px;
+  padding: 35px 0px;
 }
 
 footer {
-  background-color: #D9BBA0;
+  background-color: #130E0A;
+  color: #FFF;
   position: absolute;
   width: 100%;
 }
@@ -428,6 +423,7 @@ nav {
 
 .container {
   padding: 20px 0px;
+  width: 90% !important;
 }
 
 li {
@@ -452,6 +448,167 @@ li {
   display: block;
   margin: auto;
   max-width: 300px;
+}
+
+.admins .card {
+  background-color: #D9BBA0;
+  border: none;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.admins img {
+  border-radius: 50%;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: block;
+  border: none;
+  margin: auto;
+  z-index: 100;
+  -webkit-box-shadow: 0px 0px 13px 3px #000000;
+  box-shadow: 0px 0px 13px 3px #000000;
+  background-color: #FFF;
+}
+
+.admins .card-body {
+  background-color: #BF4904;
+  position: relative;
+  bottom: 60px;
+  margin-top: 43px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.admins h3 {
+  text-align: center;
+}
+
+.admins .role {
+  text-align: center;
+  font-style: italic;
+}
+
+.admins .card-title {
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.admins li {
+  position: relative;
+  top: 10px;
+  display: block;
+  margin: auto;
+}
+
+.admins ul {
+  width: 12%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.pos-milieu {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pos-milieu .card-body {
+  background-color: #BF4904;
+  height: 100%;
+  color: white;
+}
+
+.guerre-clans .card {
+  margin-top: 20px;
+  background-color: #D99441;
+}
+
+.guerre-clans h3 {
+  text-align: center;
+}
+
+.guerre-clans img {
+  max-height: 100px;
+  max-width: 100px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
+
+.guerre-clans li {
+  margin-top: 30px;
+}
+
+.guerre-clans li p:nth-child(1) {
+  margin-bottom: -4px;
+}
+
+.guerre-clans .img-cl {
+  height: 100px;
+}
+
+.guerre-clans .gdc-points {
+  font-weight: bold;
+}
+
+.img-periode {
+  width: 30px;
+}
+
+.img-question {
+  width: 50%;
+  max-width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-parti {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+}
+
+.img-recom {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+}
+
+.text-periode {
+  left: 20px;
+  position: relative;
+}
+
+.per {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 30px;
+  -ms-grid-columns: 5% 95%;
+      grid-template-columns: 5% 95%;
+}
+
+.per img {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  margin-top: 8px;
+}
+
+.per p {
+  -ms-grid-column: 2;
+  grid-column: 2;
 }
 
 .card-members {
@@ -592,6 +749,8 @@ li {
   display: grid;
   -ms-grid-columns: 30% 70%;
       grid-template-columns: 30% 70%;
+  -webkit-box-shadow: 0px 0px 13px 3px #000000;
+          box-shadow: 0px 0px 13px 3px #000000;
 }
 
 .act-gauche {
@@ -635,6 +794,9 @@ li {
 
 .agenda .card {
   border: none;
+  margin: 10px;
+  -webkit-box-shadow: 0px 0px 13px 3px #000000;
+          box-shadow: 0px 0px 13px 3px #000000;
 }
 
 .agenda .card-header {

@@ -2,12 +2,15 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" media="screen" type="text/css" title="style" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
     <title>Totsuka GDC</title>
 </head>
 <body>
@@ -26,7 +29,7 @@
           <li class="nav-item active dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#guerre.html" role="button" aria-haspopup="true" aria-expanded="false">GDC</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="guerre.html#quoi">Qésako?</a>
+              <a class="dropdown-item" href="guerre.html#quoi">C'est quoi?</a>
               <a class="dropdown-item" href="guerre.html#periode">Période</a>
               <a class="dropdown-item" href="guerre.html#participer">Participation</a>
               <a class="dropdown-item" href="guerre.html#recomp">Récompense</a>
@@ -36,7 +39,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#members.html" role="button" aria-haspopup="true" aria-expanded="false">Membres</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="members.html#uchiha">Uchiha</a>
+              <a class="dropdown-item" href="members.html#akatsuki">Akatsuki</a>
               <a class="dropdown-item" href="members.html#senju">Senju</a>
               <a class="dropdown-item" href="members.html#uchiha">Uchiha</a>
               <a class="dropdown-item" href="members.html#uzumaki">Uzumaki</a>
@@ -58,50 +61,219 @@
       </div>
     </nav>
   </header>
-    <main class="container">
+    <main>
+      <section class="container">
         <h1>Guerre de clans</h1>
-        <h2 id="quoi">Qésako ?</h2>
-        <p>Les quatre clans (Akatsuki vs Uchiha vs Uzumaki vs Senju) vont devoir s’affronter sur différentes activités proposées par les admins du Discord.</p>
-        <p>Chaque membre aura ses points selon les activités auquel il aura participé. Tous les points pour chaque membre seront additionnés pour les points du clan. (Je m’explique: xBlade a 5 points et Gold 3 points, le clan Akatsuki aura (5 + 3) 8 points).</p>
-        <p>Le clan qui aura plus de points sera le gagnant.</p>
+        <h2 id="quoi">C'est quoi?</h2>
+        <div class="row">
 
-        <hr class="major" />
+          <div class="col-md-6 col-8">
+            <p>Les quatre clans (Akatsuki vs Uchiha vs Uzumaki vs Senju) vont devoir s’affronter sur différentes activités proposées par les admins du Discord.</p>
+            <p>Chaque membre aura ses points selon les activités auquel il aura participé. Tous les points pour chaque membre seront additionnés pour les points du clan. (Je m’explique: xBlade a 5 points et Gold 3 points, le clan Akatsuki aura (5 + 3) 8 points).</p>
+            <p>Le clan qui aura plus de points sera le gagnant.</p>
+          
+          <div class="per">
+            <img src="assets/img/clock.png" alt="période de gdc" class="img-periode">
+            <p class="text-periode">Les guerres de clan se dérouleront tout le temps. Chaque premier jour du mois, les scores seront remis à zéro.</p>
+              
+          </div>
+        </div>
 
-        <h2 id="periode">Période</h2>
-        <p>Les guerres de clan se dérouleront chaque mois sur tout l'ensemble de ce dernier. Chaque premier du mois, les scores seront remis à zéro, et les jeux seront relancés. </p>
-        
-        <hr class="major" />
+          <div class="col-4 col-md-6">
+            <img src="assets/img/question.png" alt="question" class="img-question">
+          </div>
+        </div>
+      </section>
+      
 
-        <h2 id="participer">Comment y participer?</h2>
-        <p>Afin de pouvoir intégrer un clan, il vous faudra participer à un jeu, sous la tutelle et les ordres d'un administrateur. Ce dernier vous proposera une activité et vérifiera les résultats. Une fois validé, vous aurez le droit de choisir le clan dans lequel vous souhaitez être. Pour accéder à votre clan vous devez vous rendre dans le channel #『🎭』roles-et-clan e trouvant dans "nouveau membre" et réagir au clan que vous souhaitez rejoindre. Une fois un clan intégré, vous aurez la possibilité de jouer à la GDC avec tout les autres membres !</p>
+      <!-- PARTICIPER -->
+      <section class="fond-blanc">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <img class="img-parti" src="assets/img/parti.png" alt="participation">
+            </div>
 
-        <hr class="major" />
+            <div class="col-12 col-md-6">
+              <h2 id="participer">Comment y participer?</h2>
+              <p>Afin de pouvoir intégrer un clan, il vous faudra participer à un jeu, sous la tutelle et les ordres d'un administrateur. Ce dernier vous proposera une activité et vérifiera les résultats. Une fois validé, vous aurez le droit de choisir le clan dans lequel vous souhaitez être. Pour accéder à votre clan vous devez vous rendre dans le channel #『🎭』roles-et-clan e trouvant dans "nouveau membre" et réagir au clan que vous souhaitez rejoindre. Une fois un clan intégré, vous aurez la possibilité de jouer à la GDC avec tout les autres membres !</p>
+  
+            </div>
+          </div>
+          
+        </div>
+      </section>
 
+      <!-- RECOMPENSES -->
+      <section class="container">
         <h2 id="recomp">Récompenses</h2>
-        <p>Selon les GDC, nous offrons parfois des lots.</p>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <p>Selon les GDC, nous offrons parfois des lots.</p>
 
-        <p>Nous avons aussi un système de classement individuel. Voici donc les règles:</p>
-        <p>Tout le monde commence au rank D, pour ensuite passer au rank C, B, A, S, SS.</p>
-        <p>Pour pouvoir monter en rank il faut finir dans le top 30 des joueurs ayant fait le plus de points lors de la GDC. Vous pourrez donc voir votre rank monter de la façon suivante:</p>
-        <ul>
-            <li>1e: 6 points</li>
-            <li>2e: 5 points</li>
-            <li>3e: 4 points</li>
-            <li>4-10 e: 3 points</li>
-            <li>11-20 e: 2 points</li>
-            <li>21-30 e: 1 point</li>
-        </ul>
+            <p>Nous avons aussi un système de classement individuel. Voici donc les règles:</p>
+            <p>Tout le monde commence au rank D, pour ensuite passer au rank C, B, A, S, SS.</p>
+          
+          </div>
+          <div class="col-12 col-md-6">
+            <img src="assets/img/recompense.png" alt="récompense" class="img-recom">
+          </div>
+        </div>
+         
+        <h3>Système de points</h3>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <p>Pour pouvoir monter en rank il faut finir dans le top 30 des joueurs ayant fait le plus de points lors de la GDC. Vous pourrez donc voir votre rank monter de la façon suivante:</p>
+            <ul>
+                <li>1e: 6 points</li>
+                <li>2e: 5 points</li>
+                <li>3e: 4 points</li>
+                <li>4-10 e: 3 points</li>
+                <li>11-20 e: 2 points</li>
+                <li>21-30 e: 1 point</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6">
+            <p>Pour pouvoir passer au rank supérieur il vous faudra accumuler un total de 10 points. Sur les ranks, il y a une étoile ou deux étoiles. </p>
+            <ul>
+                <li>1 à 5 points <i class="fas fa-star"></i></li>
+                <li>6 à 10 points <i class="fas fa-star"></i> <i class="fas fa-star"></i></li>
+            </ul>
+          </div>
+        </div>
+        
 
-        <p>Pour pouvoir passer au rank supérieur il vous faudra accumuler un total de 10 points. Sur les ranks, il y a une étoile ou deux étoiles. </p>
-        <ul>
-            <li>1 à 5 points <i class="fas fa-star"></i></li>
-            <li>6 à 10 points <i class="fas fa-star"></i> <i class="fas fa-star"></i></li>
-        </ul>
+        
+      </section>
+        
 
-        <hr>
+      <!-- LES CLANS-->
+        <section class="fond-blanc guerre-clans">
+            <div class="container">
+              
+            <h2>Les clans</h2>
+            <div class="row">
+            <div class=" col-6 col-md-3">
+              <div class="card">
+                <div class="img-cl">
+                  <img src="assets/img/akatsuki.png" class="card-img-top" alt="Akatsuki">
+                </div>
+                <div class="card-body">
+                  <h3>Akatsuki</h3>
+                  <ul>
+                    <li>
+                      <p class="gdc-points">1e GDC:</p>
+                      <p>289 points - 2e</p>
+                    </li>
+                    <li>
+                      <p class="gdc-points">2e GDC:</p>
+                      <p>253 points - 2e</p>
+                    </li>
+                    <li>
+                      <p class="gdc-points">3e GDC:</p>
+                      <p>348 points - 1e</p>
+                    </li>
+                    <li>
+                      <p class="gdc-points">4e GDC:</p>
+                      <p>83 points - 3e</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-        <h2 id="lesclans">Les clans</h2>
-        <p>A venir...</p>
+            <div class=" col-6 col-md-3">
+              <div class="card">
+                  <div class="img-cl">
+                    <img src="assets/img/uzumaki.png" class="card-img-top" alt="Uzumaki">
+                
+                  </div>
+                <div class="card-body">
+                  <h3>Uzumaki</h3>
+                  <ul>
+                      <li>
+                        <p class="gdc-points">1e GDC:</p>
+                        <p>243 points - 4e</p>
+                      </li>
+                      <li>
+                        <p class="gdc-points">2e GDC:</p>
+                        <p>234 points - 4e</p>
+                      </li>
+                      <li>
+                        <p class="gdc-points">3e GDC:</p>
+                        <p>230 points - 3e</p>
+                      </li>
+                      <li>
+                        <p class="gdc-points">4e GDC:</p>
+                        <p>82 points - 4e</p>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            
+            <div class=" col-6 col-md-3">
+              <div class="card">
+                  <div class="img-cl">
+                    <img src="assets/img/uchiha.png" class="card-img-top" alt="Uchiha">
+                
+                  </div>
+                <div class="card-body">
+                  <h3>Uchiha</h3>
+                  <ul>
+                      <li>
+                        <p class="gdc-points">1e GDC:</p>
+                        <p>342 points - 1e</p>
+                      </li>
+                      <li>
+                        <p class="gdc-points">2e GDC:</p>
+                        <p>366 points - 1e</p>
+                      </li>
+                      <li>
+                        <p class="gdc-points">3e GDC:</p>
+                        <p>209 points - 4e</p>
+                      </li>
+                      <li>
+                        <p class="gdc-points">4e GDC:</p>
+                        <p>149 points - 2e</p>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            
+            <div class=" col-6 col-md-3">
+              <div class="card">
+                  <div class="img-cl">
+                    <img src="assets/img/senju.png" class="card-img-top" alt="Senju">
+                
+                  </div>
+                <div class="card-body">
+                  <h3>Senju</h3>
+                  <ul>
+                      <li>
+                        <p class="gdc-points">1e GDC:</p>
+                        <p>279 points - 3e</p>
+                      </li>
+                      <li>
+                        <p class="gdc-points">2e GDC:</p>
+                        <p>341 points - 3e</p>
+                      </li>
+                      <li>
+                        <p class="gdc-points">3e GDC:</p>
+                        <p>266 points - 2e</p>
+                      </li>
+                      <li>
+                        <p class="gdc-points">4e GDC:</p>
+                        <p>182 points - 1e</p>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
 
 
 </main>
