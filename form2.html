@@ -61,22 +61,33 @@
 
     <main class="container">
         <script type="text/javascript">var submitted=false;</script>
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='form.html';}"></iframe>
-            <form id='mG61Hd'  method="POST" target="hidden_iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSdBhZErO1gT1ZmKaHa76aZycQEOh1CguQx5BSxeuwunlg8qag/formResponse" onsubmit="submitted=true;">
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='form2.html';}"></iframe>
+            <form id='mG61Hd'  method="POST" target="hidden_iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSeLZ8NhkuI64K3uvaXhY0qZOvCcWHppPmrHp2-ItRSC9b8O4A/formResponse" onsubmit="submitted=true;">
               <div class="form-group">
-              <h2>Organiser une activité</h2>
+              <h2>Nouvelle activité</h2>
               <p>
-                <label>Activité</label>
-                <input id='activite' class="form-control" name='entry.651410280' type='text'>
+                <label>Pseudo</label>
+                <input id='pseudo' class="form-control" name='entry.1882942436' type='text'>
               </p><p>
-                <label>Date</label>
-                <input id='date'  class="form-control" name='entry.1827687429' type='date'>
+                <label>Nom de l'activité</label>
+                <input id='nomacti'  class="form-control" name='entry.1422829093' type='text'>
+              </p>
+              <h2>Explications de l'activité activité</h2>
+              <p>
+                <label>Système de points</label>
+                <input id='points' class="form-control" name='entry.1950385959' type='text'>
               </p><p>
-                <label>Heure</label>
-                <input id='heure' class="form-control" name='entry.645570525' type='time'>
+                <label>Vocal / écrit / les deux </label>
+                <p>
+                <input id="vocal" class="form-check-input" name="entry.1707229979"  type="radio" value="Vocal"><label class="form-check-label" for="vocal">Vocal</label>
+                </p><p>
+                <input id="ecrit"  class="form-check-input" name="entry.1707229979" value="Ecrit" type="radio"><label class="form-check-label" for="ecrit">Ecrit</label>
+                </p><p>
+                <input id="deux"  class="form-check-input" name="entry.1707229979" value="Les deux" type="radio"><label class="form-check-label" for="deux">Les deux</label>
+                </p>
               </p><p>
-                <label>Description</label>
-                <textarea id='description' class="form-control" name='entry.2101897386' rows='5'></textarea>
+                <label>système de l'activité (sur une journée, plusieurs jours, 1/2heure...)</label>
+                <textarea id='sysacti' class="form-control" name='entry.1608280460' rows='5'></textarea>
               </p>
                 <div id='success'></div>
                 <button type='submit' class="btn btn-primary">Send</button>

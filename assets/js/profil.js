@@ -12,9 +12,10 @@ let condi = "";
               clas.innerHTML += data + condi;
           }
       }
+
+
     
     let getObject = JSON.parse(localStorage.getItem('stock'));
-    console.log(getObject);
 
     document.title = "Profil de " + getObject.gsx$nom.$t;
     let pnom = document.querySelector(".profil-nom");
@@ -23,11 +24,15 @@ let condi = "";
     let pimg = document.querySelector(".profil-img");
     let ppendu = document.querySelector(".profil-pendu");
     let ppres = document.querySelector(".profil-pres");
+    let ppbn = document.querySelector(".profil-nombre");
+    
 
     pnom.innerHTML = getObject.gsx$nom.$t;
     Zero(getObject.gsx$total.$t, ptotal);
     pclan.innerHTML = getObject.gsx$clan.$t;
     Zero(getObject.gsx$pendu.$t, ppendu);
+    Zero(getObject.gsx$trouverbonnombre.$t, ppbn);
+    
     
     
     if(getObject.gsx$img.$t == ""){
@@ -40,6 +45,7 @@ let condi = "";
 
     if (clan == "Akatsuki"){
         pclan.src = "assets/img/akatsuki.png";
+        
         
     } else if ( clan == "Senju"){
        pclan.src = "assets/img/senju.png";
