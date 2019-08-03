@@ -60,30 +60,23 @@
     </header>
 
     <main class="container">
-        <script type="text/javascript">var submitted=false;</script>
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='merci.html';}"></iframe>
-            <form id='mG61Hd'  method="POST" target="hidden_iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSdBhZErO1gT1ZmKaHa76aZycQEOh1CguQx5BSxeuwunlg8qag/formResponse" onsubmit="submitted=true;">
-              <div class="form-group">
-              <h2>Organiser une activité</h2>
-              <p>
-                <label>Activité</label>
-                <input id='activite' class="form-control" name='entry.651410280' type='text'>
-              </p><p>
-                <label>Date</label>
-                <input id='date'  class="form-control" name='entry.1827687429' type='date'>
-              </p><p>
-                <label>Heure</label>
-                <input id='heure' class="form-control" name='entry.645570525' type='time'>
-              </p><p>
-                <label>Description</label>
-                <textarea id='description' class="form-control" name='entry.2101897386' rows='5'></textarea>
-              </p>
-                <div id='success'></div>
-                <button type='submit' class="btn btn-primary">Send</button>
-
-                </div>
-            </form>
-              
+            <script>
+                    setTimeout(function(){
+                       window.location.href = 'accueil.html';
+                    }, 5000);
+                 </script>
+        <div class="card text-center">
+            <div class="card-header">
+              Merci !
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Ta réponse à été prise en compte !</h5>
+              <p class="card-text">Merci d'avoir répondu au questionnaire... les admins te recontacteront en cas de besoin !</p>
+            </div>
+            <div class="card-footer text-muted">
+              Tu seras redirigé vers la page d'accueil dans 5s ...
+            </div>
+          </div> 
     </main>
     
 
