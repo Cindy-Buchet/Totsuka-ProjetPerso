@@ -693,6 +693,10 @@ li {
   font-style: italic;
 }
 
+.profil span {
+  font-weight: bold;
+}
+
 .topclassement {
   border: 2px solid black;
   margin-bottom: 0px !important;
@@ -777,6 +781,11 @@ li {
   height: 40px;
   border-radius: 50%;
   padding: 5px;
+}
+
+.form-compl {
+  display: block;
+  margin: auto;
 }
 
 .agenda li {

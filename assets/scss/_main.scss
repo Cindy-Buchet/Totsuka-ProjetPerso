@@ -281,6 +281,10 @@ li{
     .profil-pres{
         font-style: italic;
     }
+
+    span{
+        font-weight: bold;
+    }
   
 }
 
@@ -364,5 +368,8 @@ li{
 }
 
 
-
-
+// Form 
+.form-compl{
+    display: block;
+    margin: auto;
+}
