@@ -26,3 +26,25 @@
     }
     
 }
+
+.agenda-long{
+    margin-top: 20px;
+
+}
+.style-bouton{
+    background-color: $color2;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    &:hover{
+        opacity: 0.8;
+        background-color: $color2;
+    }
+}

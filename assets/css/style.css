@@ -524,6 +524,53 @@ li {
   color: white;
 }
 
+.bouton-nav {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 40px;
+  color: #130E0A !important;
+  background-color: #BF4904;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.bouton-nav .active {
+  color: #130E0A !important;
+  background-color: #D99441 !important;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.bouton-nav:hover {
+  opacity: 0.8;
+  color: #130E0A;
+}
+
+.discord .icon-discord {
+  width: 60px;
+  margin-top: 10px;
+}
+
+.discord {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 40px;
+  color: #130E0A;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.discord:hover {
+  opacity: 0.8;
+  color: #130E0A;
+}
+
 .guerre-clans .card {
   margin-top: 20px;
   background-color: #D99441;
@@ -816,4 +863,27 @@ li {
 
 .agenda .card-body {
   background-color: #D99441;
+}
+
+.agenda-long {
+  margin-top: 20px;
+}
+
+.style-bouton {
+  background-color: #BF4904;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.style-bouton:hover {
+  opacity: 0.8;
+  background-color: #BF4904;
 }

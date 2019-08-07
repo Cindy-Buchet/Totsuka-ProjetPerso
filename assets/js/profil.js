@@ -70,9 +70,22 @@ let condi = "";
     
 
     pnom.innerHTML = getObject.gsx$nom.$t;
-    //Zero(getObject.gsx$total.$t, ptotal);
     pclan.innerHTML = getObject.gsx$clan.$t;
 
+    
+        if (getObject.gsx$total.$t != 0){
+            condi = " points";
+        } else{
+            condi = " point";
+        }
+    
+        if (getObject.gsx$total.$t != ""){
+            ptotal.innerHTML = getObject.gsx$total.$t + condi;
+        } else{
+            ptotal.innerHTML = 0 + condi;
+        }
+    
+        
 
     for (let i = 0; i < TypeAct.length; i++){
         if (TypeAct[i][1] == "Jeux de société"){

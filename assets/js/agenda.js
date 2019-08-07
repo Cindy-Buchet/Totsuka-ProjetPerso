@@ -50,92 +50,94 @@ fetch('https://spreadsheets.google.com/feeds/list/1m_yWTlrWu7xhaEXh5QCSk8HpppKr_
             TabMembers.push(NewTab);
 
         }
-        
+        let date = new Date();
+            
+        let nowday = date.getDate();   
+        console.log(nowday);
         //parcours du tableau et création des cards
         for(index = 0; index < TabMembers.length; index++){
+            if(nowday <= TabMembers[index][0]){
             
-            //on affiche que les jours ou il y a des activités
-            if ( TabMembers[index][1] == "" && TabMembers[index][2] == "" && TabMembers[index][3] == "" ){
-                //possibilité d'afficher "aucune activité" sur le jours"
-                let Cardcontainer = document.getElementById('card-container');
-            
-
-
-            let col = document.createElement('div');
-            col.className = 'col-12 col-md-4 col-lg-3';
-
-            let card = document.createElement('div');
-            card.className = 'card bg-light mb-3';
-
-            
-
-            let cardBody = document.createElement('div');
-            cardBody.className = 'card-body';
-
-            //Card Title : ici jour + mois 
-            let title = document.createElement('h5');
-            title.innerText = TabMembers[index][0] + " " +  mois;
-            title.className = 'card-header text-center';
-
-            let text = document.createElement('p');
-            text.innerText = "\n Aucune activité n'est organisé pour ce jour.";
-            text.className = 'card-text text-center';
-            
-            
-            card.appendChild(title);
-            cardBody.appendChild(text);
-            card.appendChild(cardBody);
-            col.appendChild(card);
-            Cardcontainer.appendChild(col);
-            }else{
-
-                // on vérifie qu'il y a une activité et seulement si c'est le  cas on affiche la card
-                if (TabMembers[index][1] != "" && TabMembers[index][2] != "" && TabMembers[index][3] != "" ) {
-                let Cardcontainer = document.getElementById('card-container');
+                //on affiche que les jours ou il y a des activités
+                if ( TabMembers[index][1] == "" && TabMembers[index][2] == "" && TabMembers[index][3] == "" ){
+                    //possibilité d'afficher "aucune activité" sur le jours"
+                    let Cardcontainer = document.getElementById('card-container');
                 
+                    let col = document.createElement('div');
+                    col.className = 'col-12 col-md-4 col-lg-3';
 
-                let col = document.createElement('div');
-                col.className = 'col-12 col-md-4 col-lg-3';
+                    let card = document.createElement('div');
+                    card.className = 'card bg-light mb-3';
+  
 
-                let card = document.createElement('div');
-                card.className = 'card bg-light mb-3';
+                    let cardBody = document.createElement('div');
+                    cardBody.className = 'card-body';
 
-                
+                    //Card Title : ici jour + mois 
+                    let title = document.createElement('h5');
+                    title.innerText = TabMembers[index][0] + " " +  mois;
+                    title.className = 'card-header text-center';
 
-                let cardBody = document.createElement('div');
-                cardBody.className = 'card-body';
+                    let text = document.createElement('p');
+                    text.innerText = "\n Aucune activité n'est organisé pour ce jour.";
+                    text.className = 'card-text text-center';
+                    
+                    
+                    card.appendChild(title);
+                    cardBody.appendChild(text);
+                    card.appendChild(cardBody);
+                    col.appendChild(card);
+                    Cardcontainer.appendChild(col);
+                }else{
 
-                //Card Title : ici jour + mois 
-                let title = document.createElement('h5');
-                title.innerText = TabMembers[index][0] + " " +  mois;
-                title.className = 'card-header text-center';
-                card.appendChild(title);
+                    // on vérifie qu'il y a une activité et seulement si c'est le  cas on affiche la card
+                    if (TabMembers[index][1] != "" && TabMembers[index][2] != "" && TabMembers[index][3] != "" ) {
+                    let Cardcontainer = document.getElementById('card-container');
+                    
 
-                let ListUl = document.createElement("ul");
+                    let col = document.createElement('div');
+                    col.className = 'col-12 col-md-4 col-lg-3';
 
-                function CreatLi(Tab1, Tab2, Tab3){
-                    let text = document.createElement('li');
-                    text.innerHTML = "<p><span>" + Tab1 + "</span> à " + Tab2 + "</p><p>Organisé par " + Tab3 + "</p>";
-                    ListUl.appendChild(text); 
+                    let card = document.createElement('div');
+                    card.className = 'card bg-light mb-3';
+
+                    
+
+                    let cardBody = document.createElement('div');
+                    cardBody.className = 'card-body';
+
+                    //Card Title : ici jour + mois 
+                    let title = document.createElement('h5');
+                    title.innerText = TabMembers[index][0] + " " +  mois;
+                    title.className = 'card-header text-center';
+                    card.appendChild(title);
+
+                    let ListUl = document.createElement("ul");
+
+                    function CreatLi(Tab1, Tab2, Tab3){
+                        let text = document.createElement('li');
+                        text.innerHTML = "<p><span>" + Tab1 + "</span> à " + Tab2 + "</p><p>Organisé par " + Tab3 + "</p>";
+                        ListUl.appendChild(text); 
+                    }
+                    
+                    CreatLi(TabMembers[index][1], TabMembers[index][2],TabMembers[index][3]); 
+
+                    if (TabMembers[index][4] != "" && TabMembers[index][5] != "" && TabMembers[index][6] != "" ){
+                        CreatLi(TabMembers[index][4], TabMembers[index][5],TabMembers[index][6]); 
+                    }
+                    
+                    if (TabMembers[index][7] != "" && TabMembers[index][8] != "" && TabMembers[index][9] != "" ){
+                        CreatLi(TabMembers[index][7], TabMembers[index][8],TabMembers[index][9]); 
+                    }
+
+                    cardBody.appendChild(ListUl);
+                    
+                    card.appendChild(cardBody);
+                    col.appendChild(card);
+                    Cardcontainer.appendChild(col);
+                    }
                 }
-                
-                CreatLi(TabMembers[index][1], TabMembers[index][2],TabMembers[index][3]); 
-
-                if (TabMembers[index][4] != "" && TabMembers[index][5] != "" && TabMembers[index][6] != "" ){
-                    CreatLi(TabMembers[index][4], TabMembers[index][5],TabMembers[index][6]); 
-                }
-                
-                if (TabMembers[index][7] != "" && TabMembers[index][8] != "" && TabMembers[index][9] != "" ){
-                    CreatLi(TabMembers[index][7], TabMembers[index][8],TabMembers[index][9]); 
-                }
-
-                cardBody.appendChild(ListUl);
-                
-                card.appendChild(cardBody);
-                col.appendChild(card);
-                Cardcontainer.appendChild(col);
-                }
-        }
+            }
                 
         }
 }).catch(error => {

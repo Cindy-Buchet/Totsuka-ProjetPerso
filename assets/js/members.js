@@ -38,6 +38,18 @@ let inputvalue ="";
 
         TopMembers();
         
+
+        let PaUch = document.querySelector(".total-uch");
+        let PtsUchiha = 0;
+
+        let PaUzu = document.querySelector(".total-uzu");
+        let PtsUzu = 0;
+        
+        let PaAkat = document.querySelector(".total-aka");
+        let PtsAkat = 0;
+        
+        let PaSenju = document.querySelector(".total-sen");
+        let PtsSenju = 0;
         
         // Boucle pour afficher tout le monde
         for (let i = 0; i < test.length; i++){
@@ -56,7 +68,7 @@ let inputvalue ="";
             let list__el = "";
 
             // Afficher point(s) selon le nombre
-            function Point(data,clas){
+            function Point(data,clas,addition){
                 if (data == 0){
                     condi = " point";
                 } else{
@@ -71,28 +83,32 @@ let inputvalue ="";
             }
 
             let clan = test[i].gsx$clan.$t;
-            
+
             // Mettre dans son clan
             if (clan == "Akatsuki" && test[i].gsx$nom.$t != ""){
                 nom.innerHTML = test[i].gsx$nom.$t;
                 Point(test[i].gsx$total.$t,total);
-                aka.appendChild(a);   
+                PtsAkat = PtsAkat + parseInt(test[i].gsx$total.$t);
+                aka.appendChild(a);
             } else if ( clan == "Senju" && test[i].gsx$nom.$t != ""){
                 nom.innerHTML = test[i].gsx$nom.$t;
                 Point(test[i].gsx$total.$t,total);
+                PtsSenju = PtsSenju + parseInt(test[i].gsx$total.$t);
                 sen.appendChild(a);
                  
             }  else if ( clan == "Uchiha" && test[i].gsx$nom.$t != ""){
                 nom.innerHTML = test[i].gsx$nom.$t;
                 Point(test[i].gsx$total.$t,total);
+                PtsUchiha = PtsUchiha + parseInt(test[i].gsx$total.$t);
                 uch.appendChild(a);
                  
             }  else if ( clan == "Uzumaki" && test[i].gsx$nom.$t != ""){
                 nom.innerHTML = test[i].gsx$nom.$t;
                 Point(test[i].gsx$total.$t,total);
+                PtsUzu = PtsUzu + parseInt(test[i].gsx$total.$t);
                 uzu.appendChild(a);
-                 
             }
+
 
             // Enregistrer sur le local la personne
             list__el =  a.querySelector("#membres"+i);
@@ -107,6 +123,11 @@ let inputvalue ="";
             
 
             }   
+
+            PaAkat.innerHTML = PtsAkat + " points";
+            PaSenju.innerHTML = PtsSenju + " points";
+            PaUch.innerHTML = PtsUchiha + " points";
+            PaUzu.innerHTML = PtsUzu + " points";
             
 
 
