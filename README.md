@@ -1,4 +1,5 @@
 # Projet Perso
+> https://totsuka.tk/
 Ceci est un projet perso que je réalise avec une autre personne.
 
 ## Quel est ce projet perso ?
@@ -19,10 +20,3 @@ J'utilise divers languages de programmation:
 - JSON (base de données d'un Google Sheets)
 
 J'aimerais approndir ces technologies afin d'être plus à l'aise avec. 
-
-## Contenu du site
-Les diverses pages:
-- 
-
-## Charte graphique
-A venir.
